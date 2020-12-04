@@ -8,7 +8,7 @@ document.querySelector('#weatherForm').addEventListener('submit', (e) => {
     console.log("clicked")
     const cityName = document.querySelector('#cityName').value 
     console.log(cityName)
-    fetch('http://localhost:3000/weather/api/'+ cityName).then( (response) =>{
+    fetch('/weather/api/'+ cityName).then( (response) =>{
         response.json().then((data) => {
             if (data.error) {
                 console.log(data.error)

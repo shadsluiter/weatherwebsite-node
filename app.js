@@ -9,6 +9,8 @@ var usersRouter = require('./routes/users');
 var weatherRouter = require('./routes/weather');
 
 var app = express();
+// heroku uses the process.env.PORT variable.  If it fails, then use 3000 for default.
+const port = process.env.PORT || 3000
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -42,4 +44,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+app.listen(port, function () {
+  console.log("Express server listening on port " + port);
+  });
 module.exports = app;
