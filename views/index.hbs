@@ -1,0 +1,30 @@
+<style>
+    #weatherReport {
+        border: 1px black solid;
+        padding: 5px;
+        margin:5px;
+        background-color: #ddd;
+    }
+    #cityName 
+    {
+        padding:5px;
+        margin:5px;
+         }
+    #buttonOK {
+        background-color: #222;
+        color:white;
+        padding:5px;
+        border-radius: 5px;
+    }
+</style>
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+<form id="weatherForm">
+    <input type="text" name="city" id="cityName" placeholder="city"/>
+    <button id="buttonOK" type="submit" name="OK">OK</button>
+</form>
+<script src="/javascripts/app.js"></script>
+ 
+<div id="weatherReport">
+<p id="messageArea"></p>
+</div>
